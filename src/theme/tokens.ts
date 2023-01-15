@@ -1,4 +1,4 @@
-export const token = {
+const token = {
   'md-source': '#6750A4',
 
   /* primary */
@@ -275,3 +275,5 @@ export const token = {
   'md-sys-typescale-title-small-line-height': '20px',
   'md-sys-typescale-title-small-letter-spacing': '0.10px',
 };
+
+export default token;
