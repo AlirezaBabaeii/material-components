@@ -1,6 +1,7 @@
-import { token } from './tokens';
+import token from './tokens';
+import type { ColorTokens } from './types';
 
-export const light = {
+const lightTheme: ColorTokens = {
   'md-sys-color-primary': token['md-sys-color-primary-light'],
   'md-sys-color-on-primary': token['md-sys-color-on-primary-light'],
   'md-sys-color-primary-container':
@@ -41,3 +42,5 @@ export const light = {
   'md-sys-color-outline-variant': token['md-sys-color-outline-variant-light'],
   'md-sys-color-scrim': token['md-sys-color-scrim-light'],
 };
+
+export default lightTheme;

@@ -1,6 +1,6 @@
-import { token } from './tokens';
+import token from './tokens';
 
-export const typography = {
+const typography: TypographyTokens = {
   'display-large': {
     fontFamily: token['md-sys-typescale-display-large-font-family-name'],
     fontStyle: token['md-sys-typescale-display-large-font-family-style'],
@@ -152,3 +152,22 @@ export const typography = {
     // textDecoration: token['md-sys-typescale-title-small-text-decoration'],
   },
 };
+
+export type TypographyTokens = Record<
+  Variants,
+  Record<CSSTypographyProperties, any>
+>;
+
+type CSSTypographyProperties =
+  | 'fontFamily'
+  | 'fontSize'
+  | 'lineHeight'
+  | 'letterSpacing'
+  | 'fontStyle'
+  | 'fontWeight';
+
+type SizeKey = 'large' | 'medium' | 'small';
+type TypeKey = 'display' | 'headline' | 'body' | 'label' | 'title';
+export type Variants = `${TypeKey}-${SizeKey}`;
+
+export default typography;

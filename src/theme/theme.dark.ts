@@ -1,6 +1,7 @@
-import { token } from './tokens';
+import token from './tokens';
+import type { ColorTokens } from './types';
 
-export const dark = {
+const darkTheme: ColorTokens = {
   'md-sys-color-primary': token['md-sys-color-primary-dark'],
   'md-sys-color-on-primary': token['md-sys-color-on-primary-dark'],
   'md-sys-color-primary-container':
@@ -41,3 +42,5 @@ export const dark = {
   'md-sys-color-outline-variant': token['md-sys-color-outline-variant-dark'],
   'md-sys-color-scrim': token['md-sys-color-scrim-dark'],
 };
+
+export default darkTheme;
