@@ -1,32 +1,46 @@
 import React from 'react';
 import { ThemeProvider as SThemeProvider } from 'styled-components';
-import { dark } from './theme.dark';
-import { light } from './theme.light';
-import { typography } from './typography';
+import dark from './theme.dark';
+import light from './theme.light';
+import type { ColorTokens } from './types';
+import typography, { type TypographyTokens } from './typography';
 
-export enum Theme {
+enum ThemeName {
   Light = 'light',
   Dark = 'dark',
 }
 
+const themeTokens: ThemeTokens = { typography, light, dark };
 type ThemeTokens = {
-  sys: Record<`${Theme}`, object>;
-  typography: Record<string, any>;
+  typography: TypographyTokens;
+  light: ColorTokens;
+  dark: ColorTokens;
 };
 
-const ThemeTokens: Readonly<ThemeTokens> = {
-  sys: { light, dark },
-  typography: typography,
-};
+const ThemeSwitcherContext = React.createContext<{
+  theme: `${ThemeName}` | ThemeName;
+  setTheme: SetTheme;
+} | null>(null);
+type SetTheme = (theme: `${ThemeName}` | ThemeName) => void;
 
-export function ThemeProvider(props: React.PropsWithChildren) {
-  const [theme, setTheme] = React.useState<`${Theme}` | Theme>('light');
+function ThemeProvider({ children }: React.PropsWithChildren): JSX.Element {
+  const [theme, setTheme] = React.useState<`${ThemeName}` | ThemeName>('light');
 
   return (
-    <SThemeProvider
-      theme={{ typescale: ThemeTokens.typography, sys: ThemeTokens.sys[theme] }}
+    <ThemeSwitcherContext.Provider
+      value={React.useMemo(() => ({ theme, setTheme }), [theme, setTheme])}
     >
-      {props.children}
-    </SThemeProvider>
+      <SThemeProvider
+        theme={{ typography: themeTokens.typography, ...themeTokens[theme] }}
+      >
+        {children}
+      </SThemeProvider>
+    </ThemeSwitcherContext.Provider>
   );
 }
+
+function useTheme() {
+  return React.useContext(ThemeSwitcherContext)!;
+}
+
+export { ThemeName as Theme, ThemeProvider, useTheme };
