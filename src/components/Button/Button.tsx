@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTheme } from '../../theme';
+import { withToken, withTypography } from '../../theme/mixins';
 
 export enum Variant {
   Filled = 'filled',
@@ -10,23 +12,38 @@ export enum Variant {
 }
 
 const BaseButton = styled.button`
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  stroke: none;
+  padding: 2rem 6rem;
+  margin: 0;
   border-radius: 100px;
+
+  ${withTypography('title-large')}
 `;
 
 const FilledButton = styled(BaseButton)`
-  background-color: blue;
-  border: none;
-  color: white;
+  background-color: ${withToken('primary')};
+  color: ${withToken('on-primary')};
 `;
 
 const OutlinedButton = styled(BaseButton)`
-  background: transparent;
-  border: 2px solid blue;
-  color: blue;
+  border: 2px solid ${(props) => props.theme['md-sys-color-primary']};
+  color: ${(props) => props.theme['md-sys-color-primary']};
 `;
 
 export default function Button(props: Props): JSX.Element {
-  const { variant, ...passedProps } = props;
+  const { theme, setTheme } = useTheme();
+  const { variant, ...passedProps } = {
+    ...props,
+    onClick() {
+      setTheme(theme === 'light' ? 'dark' : 'light');
+    },
+  };
   switch (variant) {
     case Variant.Filled:
       return <FilledButton {...passedProps} />;
