@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-unused-vars": "off",
+    "react/jsx-uses-react": "off",
+    "react/jsx-uses-vars": "off",
+    "jsx-a11y/no-autofocus": "off"
+  }
+}
