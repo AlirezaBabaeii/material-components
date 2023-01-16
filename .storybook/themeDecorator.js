@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { ThemeProvider } from '../src/theme';
+import { ThemeProvider, useTheme } from '../src/theme';
+import React from 'react';
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -7,11 +8,28 @@ body {
 }
 `;
 
-export default function ThemeDecorator(storyFunction) {
+export default function ThemeDecorator(storyFunction, context) {
 	return (
 		<ThemeProvider>
-			<GlobalStyle />
-			{storyFunction()}
+			<ThemeRenderer
+				storyFunction={storyFunction}
+				theme={context.globals.theme}
+			/>
 		</ThemeProvider>
+	);
+}
+
+function ThemeRenderer(props) {
+	const { setTheme } = useTheme();
+
+	React.useEffect(() => {
+		setTheme(props.theme);
+	}, [props.theme]);
+
+	return (
+		<>
+			<GlobalStyle />
+			{props.storyFunction()}
+		</>
 	);
 }
