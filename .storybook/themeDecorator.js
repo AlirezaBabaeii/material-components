@@ -8,10 +8,10 @@ body {
 `;
 
 export default function ThemeDecorator(storyFunction) {
-  return (
-    <ThemeProvider>
-      <GlobalStyle />
-      {storyFunction()}
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider>
+			<GlobalStyle />
+			{storyFunction()}
+		</ThemeProvider>
+	);
 }
