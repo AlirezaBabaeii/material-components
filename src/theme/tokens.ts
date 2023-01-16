@@ -156,7 +156,7 @@ const token = {
 	'md-sys-color-scrim-dark': '#000000',
 
 	/* display - large */
-	'md-sys-typescale-display-large-font-family-name': 'Roboto',
+	'md-sys-typescale-display-large-font-family-name': 'Saira',
 	'md-sys-typescale-display-large-font-family-style': 'Regular',
 	'md-sys-typescale-display-large-font-weight': '400px',
 	'md-sys-typescale-display-large-font-size': '57px',
@@ -164,7 +164,7 @@ const token = {
 	'md-sys-typescale-display-large-letter-spacing': '-0.25px',
 
 	/* display - medium */
-	'md-sys-typescale-display-medium-font-family-name': 'Roboto',
+	'md-sys-typescale-display-medium-font-family-name': 'Saira',
 	'md-sys-typescale-display-medium-font-family-style': 'Regular',
 	'md-sys-typescale-display-medium-font-weight': '400px',
 	'md-sys-typescale-display-medium-font-size': '45px',
@@ -172,7 +172,7 @@ const token = {
 	'md-sys-typescale-display-medium-letter-spacing': '0px',
 
 	/* display - small */
-	'md-sys-typescale-display-small-font-family-name': 'Roboto',
+	'md-sys-typescale-display-small-font-family-name': 'Saira',
 	'md-sys-typescale-display-small-font-family-style': 'Regular',
 	'md-sys-typescale-display-small-font-weight': '400px',
 	'md-sys-typescale-display-small-font-size': '36px',
@@ -180,7 +180,7 @@ const token = {
 	'md-sys-typescale-display-small-letter-spacing': '0px',
 
 	/* headline - large */
-	'md-sys-typescale-headline-large-font-family-name': 'Roboto',
+	'md-sys-typescale-headline-large-font-family-name': 'Saira',
 	'md-sys-typescale-headline-large-font-family-style': 'Regular',
 	'md-sys-typescale-headline-large-font-weight': '400px',
 	'md-sys-typescale-headline-large-font-size': '32px',
@@ -188,7 +188,7 @@ const token = {
 	'md-sys-typescale-headline-large-letter-spacing': '0px',
 
 	/* headline - medium */
-	'md-sys-typescale-headline-medium-font-family-name': 'Roboto',
+	'md-sys-typescale-headline-medium-font-family-name': 'Saira',
 	'md-sys-typescale-headline-medium-font-family-style': 'Regular',
 	'md-sys-typescale-headline-medium-font-weight': '400px',
 	'md-sys-typescale-headline-medium-font-size': '28px',
@@ -196,7 +196,7 @@ const token = {
 	'md-sys-typescale-headline-medium-letter-spacing': '0px',
 
 	/* headline - small */
-	'md-sys-typescale-headline-small-font-family-name': 'Roboto',
+	'md-sys-typescale-headline-small-font-family-name': 'Saira',
 	'md-sys-typescale-headline-small-font-family-style': 'Regular',
 	'md-sys-typescale-headline-small-font-weight': '400px',
 	'md-sys-typescale-headline-small-font-size': '24px',
@@ -204,7 +204,7 @@ const token = {
 	'md-sys-typescale-headline-small-letter-spacing': '0px',
 
 	/* body - large */
-	'md-sys-typescale-body-large-font-family-name': 'Roboto',
+	'md-sys-typescale-body-large-font-family-name': 'Saira',
 	'md-sys-typescale-body-large-font-family-style': 'Regular',
 	'md-sys-typescale-body-large-font-weight': '400px',
 	'md-sys-typescale-body-large-font-size': '16px',
@@ -212,7 +212,7 @@ const token = {
 	'md-sys-typescale-body-large-letter-spacing': '0.50px',
 
 	/* body - medium */
-	'md-sys-typescale-body-medium-font-family-name': 'Roboto',
+	'md-sys-typescale-body-medium-font-family-name': 'Saira',
 	'md-sys-typescale-body-medium-font-family-style': 'Regular',
 	'md-sys-typescale-body-medium-font-weight': '400px',
 	'md-sys-typescale-body-medium-font-size': '14px',
@@ -220,7 +220,7 @@ const token = {
 	'md-sys-typescale-body-medium-letter-spacing': '0.25px',
 
 	/* body - small */
-	'md-sys-typescale-body-small-font-family-name': 'Roboto',
+	'md-sys-typescale-body-small-font-family-name': 'Saira',
 	'md-sys-typescale-body-small-font-family-style': 'Regular',
 	'md-sys-typescale-body-small-font-weight': '400px',
 	'md-sys-typescale-body-small-font-size': '12px',
@@ -228,7 +228,7 @@ const token = {
 	'md-sys-typescale-body-small-letter-spacing': '0.40px',
 
 	/* label - large */
-	'md-sys-typescale-label-large-font-family-name': 'Roboto',
+	'md-sys-typescale-label-large-font-family-name': 'Saira',
 	'md-sys-typescale-label-large-font-family-style': 'Medium',
 	'md-sys-typescale-label-large-font-weight': '500px',
 	'md-sys-typescale-label-large-font-size': '14px',
@@ -236,7 +236,7 @@ const token = {
 	'md-sys-typescale-label-large-letter-spacing': '0.10px',
 
 	/* label - medium */
-	'md-sys-typescale-label-medium-font-family-name': 'Roboto',
+	'md-sys-typescale-label-medium-font-family-name': 'Saira',
 	'md-sys-typescale-label-medium-font-family-style': 'Medium',
 	'md-sys-typescale-label-medium-font-weight': '500px',
 	'md-sys-typescale-label-medium-font-size': '12px',
@@ -244,7 +244,7 @@ const token = {
 	'md-sys-typescale-label-medium-letter-spacing': '0.50px',
 
 	/* label - small */
-	'md-sys-typescale-label-small-font-family-name': 'Roboto',
+	'md-sys-typescale-label-small-font-family-name': 'Saira',
 	'md-sys-typescale-label-small-font-family-style': 'Medium',
 	'md-sys-typescale-label-small-font-weight': '500px',
 	'md-sys-typescale-label-small-font-size': '11px',
@@ -252,7 +252,7 @@ const token = {
 	'md-sys-typescale-label-small-letter-spacing': '0.50px',
 
 	/* title - large */
-	'md-sys-typescale-title-large-font-family-name': 'Roboto',
+	'md-sys-typescale-title-large-font-family-name': 'Saira',
 	'md-sys-typescale-title-large-font-family-style': 'Regular',
 	'md-sys-typescale-title-large-font-weight': '400px',
 	'md-sys-typescale-title-large-font-size': '22px',
@@ -260,7 +260,7 @@ const token = {
 	'md-sys-typescale-title-large-letter-spacing': '0px',
 
 	/* title - medium */
-	'md-sys-typescale-title-medium-font-family-name': 'Roboto',
+	'md-sys-typescale-title-medium-font-family-name': 'Saira',
 	'md-sys-typescale-title-medium-font-family-style': 'Medium',
 	'md-sys-typescale-title-medium-font-weight': '500px',
 	'md-sys-typescale-title-medium-font-size': '16px',
@@ -268,7 +268,7 @@ const token = {
 	'md-sys-typescale-title-medium-letter-spacing': '0.15px',
 
 	/* title - small */
-	'md-sys-typescale-title-small-font-family-name': 'Roboto',
+	'md-sys-typescale-title-small-font-family-name': 'Saira',
 	'md-sys-typescale-title-small-font-family-style': 'Medium',
 	'md-sys-typescale-title-small-font-weight': '500px',
 	'md-sys-typescale-title-small-font-size': '14px',
