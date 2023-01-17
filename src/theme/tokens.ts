@@ -274,6 +274,14 @@ const token = {
 	'md-sys-typescale-title-small-font-size': '14px',
 	'md-sys-typescale-title-small-line-height': '20px',
 	'md-sys-typescale-title-small-letter-spacing': '0.10px',
+
+	/* elevation */
+	'md-sys-elevation-level0': '0px',
+	'md-sys-elevation-level1': '1px',
+	'md-sys-elevation-level2': '3px',
+	'md-sys-elevation-level3': '6px',
+	'md-sys-elevation-level4': '8px',
+	'md-sys-elevation-level5': '12px',
 };
 
 export default token;
