@@ -1,32 +1,33 @@
-import { ElevatedButton, type ElevatedProps } from './elevated.styled';
-import { FilledButton, type FilledProps } from './filled.styled';
-import { OutlinedButton, type OutlinedProps } from './outlined.styled';
-import { TextButton, type TextProps } from './text.styled';
-import { TonalButton, type TonalProps } from './tonal.styled';
-import { Variant, type PropsWithBase } from './types';
+/* eslint-disable react/destructuring-assignment */
+import { type Variants as ColorKey } from '../../theme/types';
+import { Icon } from '../Icon';
+import type { IconType } from '../Icon/types';
+import { useVariant } from './hooks';
+import type { VariantType } from './types';
 
-export default function Button({ variant, ...props }: Props): JSX.Element {
-	switch (variant) {
-		case Variant.Filled:
-			return <FilledButton {...props} />;
+type Props = {
+	label: string;
+	icon?: IconType;
+	variant?: VariantType;
+	color?: ColorKey;
+};
+export default function ButtonComponent(props: Props): JSX.Element {
+	const layer = useVariant(props.variant!);
 
-		case Variant.Outlined:
-			return <OutlinedButton {...props} />;
-
-		case Variant.Text:
-			return <TextButton {...props} />;
-
-		case Variant.Elevated:
-			return <ElevatedButton {...props} />;
-
-		case Variant.Tonal:
-			return <TonalButton {...props} />;
-
-		default:
-			return <FilledButton {...props} />;
-	}
+	return (
+		<layer.Container
+			hasIcon={!!props.icon}
+			color={props.color}>
+			<layer.State />
+			{!!props.icon && <Icon icon={props.icon} />}
+			<layer.Label>{props.label}</layer.Label>
+		</layer.Container>
+	);
 }
 
-type Props = PropsWithBase<
-	FilledProps | OutlinedProps | TextProps | ElevatedProps | TonalProps
->;
+const defaultProps: Omit<Props, 'label'> = {
+	icon: undefined,
+	variant: 'filled',
+	color: 'primary',
+};
+ButtonComponent.defaultProps = defaultProps;
