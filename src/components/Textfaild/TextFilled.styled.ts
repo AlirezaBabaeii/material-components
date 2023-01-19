@@ -26,7 +26,7 @@ export const TextFilledContainer = styled.div`
 	border-bottom: 1px solid #1b1b1f;
 	& ${Input}:focus + ${Label} {
 		transform: translateY(-50%);
-		top: calc(0% + 8px);
+		top: 0%;
 		font-size: 12px;
 		color: #343dff;
 	}
@@ -35,7 +35,7 @@ export const TextFilledContainer = styled.div`
 	}
 	& ${Input}:not(:placeholder-shown) + ${Label} {
 		transform: translateY(-50%);
-		top: calc(0% + 8px);
+		top: 0%;
 		line-height: 16px;
 		color: #343dff;
 	}
