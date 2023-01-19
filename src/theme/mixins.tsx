@@ -5,4 +5,5 @@ export function withToken(token: ColorVariants): (props: any) => string {
 }
 
 export { withTransition } from './motion';
+export { withRounded } from './rounded';
 export { withTypography } from './typography';
