@@ -1,4 +1,3 @@
-import React from 'react';
 import { Input, Label, RightComponent } from './base.styled';
 import { TextFilledContainer, InerContainer } from './TextFilled.styled';
 import OutlindeTextFilled, { LabelOutlined } from './TextOutlined.styled';
