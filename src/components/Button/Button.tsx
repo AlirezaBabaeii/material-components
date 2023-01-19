@@ -1,33 +1,33 @@
 /* eslint-disable react/destructuring-assignment */
-import { type Variants as ColorKey } from '../../theme/types';
 import { Icon } from '../Icon';
-import type { IconType } from '../Icon/types';
+import type { IconSymbolType } from '../Icon/types';
 import { useVariant } from './hooks';
 import type { VariantType } from './types';
 
 type Props = {
 	label: string;
-	icon?: IconType;
+	icon?: IconSymbolType;
 	variant?: VariantType;
-	color?: ColorKey;
+	href?: string;
 };
 export default function ButtonComponent(props: Props): JSX.Element {
 	const layer = useVariant(props.variant!);
+	const isAnchor = Boolean(props.href);
 
 	return (
 		<layer.Container
-			hasIcon={!!props.icon}
-			color={props.color}>
-			<layer.State />
+			as={isAnchor ? 'a' : 'button'}
+			hasIcon={!!props.icon}>
 			{!!props.icon && <Icon icon={props.icon} />}
 			<layer.Label>{props.label}</layer.Label>
+			<layer.State />
 		</layer.Container>
 	);
 }
 
 const defaultProps: Omit<Props, 'label'> = {
+	href: undefined,
 	icon: undefined,
 	variant: 'filled',
-	color: 'primary',
 };
 ButtonComponent.defaultProps = defaultProps;

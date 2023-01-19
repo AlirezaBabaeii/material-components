@@ -1,15 +1,20 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { withToken } from '../../theme';
-import type { Variants as ColorType } from '../../theme/types';
 import { BaseContainer, BaseLabelLayer, BaseStateLayer } from './base.styled';
-
-export const Container = styled(BaseContainer)`
-	${(props) => css`
-		background-color: ${withToken(props.color as ColorType)};
-		color: ${withToken(`on-${props.color}` as ColorType)};
-	`}
-`;
 
 export const State = styled(BaseStateLayer)``;
 
 export const Label = styled(BaseLabelLayer)``;
+
+export const Container = styled(BaseContainer)`
+	background-color: transparent;
+	color: ${withToken('primary')};
+	padding-inline-end: ${(props) => (props.hasIcon ? '16px' : '12px')};
+	padding-inline-start: 12px;
+	min-width: 48px;
+	border-radius: 20px;
+
+	&:disabled {
+		opacity: 1;
+	}
+`;
