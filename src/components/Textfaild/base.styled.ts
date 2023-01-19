@@ -4,6 +4,8 @@ export const RightComponent = styled.div`
 	width: max-content;
 	flex-shrink: 1;
 	flex-grow: 0;
+	align-items: center;
+	display: flex;
 `;
 
 export const Label = styled.div`
