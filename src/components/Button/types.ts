@@ -8,6 +8,7 @@ export enum Variant {
 	Elevated = 'elevated',
 	Tonal = 'tonal',
 }
+export type VariantType = `${Variant}` | Variant;
 
 export type PropsWithBase<Props = {}> = PropsWithChildren<
 	{

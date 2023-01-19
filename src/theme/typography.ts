@@ -1,3 +1,4 @@
+import { css, type FlattenSimpleInterpolation } from 'styled-components';
 import token from './tokens';
 
 const typography: TypographyTokens = {
@@ -171,3 +172,23 @@ type TypeKey = 'display' | 'headline' | 'body' | 'label' | 'title';
 export type Variants = `${TypeKey}-${SizeKey}`;
 
 export default typography;
+
+export function withTypography(variant: Variants): FlattenSimpleInterpolation {
+	const {
+		fontFamily,
+		fontStyle,
+		fontWeight,
+		fontSize,
+		letterSpacing,
+		lineHeight,
+	} = typography[variant];
+
+	return css`
+		font-family: ${fontFamily};
+		font-style: ${fontStyle};
+		font-weight: ${fontWeight};
+		font-size: ${fontSize};
+		letter-spacing: ${letterSpacing};
+		line-height: ${lineHeight};
+	`;
+}

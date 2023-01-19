@@ -276,14 +276,18 @@ const token = {
 	'md-sys-typescale-title-small-letter-spacing': '0.10px',
 
 	/* elevation */
-	'md-sys-elevation-level0': '0px',
-	'md-sys-elevation-level1': '1px',
-	'md-sys-elevation-level2': '3px',
-	'md-sys-elevation-level3': '6px',
-	'md-sys-elevation-level4': '8px',
-	'md-sys-elevation-level5': '12px',
+	'md-sys-elevation-level0': '0',
+	'md-sys-elevation-level1': '1',
+	'md-sys-elevation-level2': '3',
+	'md-sys-elevation-level3': '6',
+	'md-sys-elevation-level4': '8',
+	'md-sys-elevation-level5': '12',
 
-	/* duration */
+	// FIXME : 'md-sys-elevation-level1': '0px 1px 2px 0px rgba(0,0,0,.3),0px 1px 3px 1px rgba(0,0,0,.15)',
+	// FIXME : 'md-sys-elevation-level2': '0px 1px 2px 0px rgba(0,0,0,.3),0px 2px 6px 2px rgba(0,0,0,.15)',
+	// FIXME : 'md-sys-elevation-level3': '0px 1px 3px 0px rgba(0,0,0,.3),0px 4px 8px 3px rgba(0,0,0,.15)',
+
+	/* motion-duration */
 	'md-sys-motion-duration-short1': '50ms',
 	'md-sys-motion-duration-short2': '100ms',
 	'md-sys-motion-duration-short3': '150ms',
@@ -301,7 +305,7 @@ const token = {
 	'md-sys-motion-duration-extra-long3': '900ms',
 	'md-sys-motion-duration-extra-long4': '1000ms',
 
-	/* easing */
+	/* motion-easing */
 	'md-sys-motion-easing-linear': 'cubic-bezier(0, 0, 1, 1)',
 	'md-sys-motion-easing-standard': 'cubic-bezier(0.2, 0, 0, 1)',
 	'md-sys-motion-easing-standard-accelerate': 'cubic-bezier(0.3, 0, 1, 1)',
@@ -315,8 +319,27 @@ const token = {
 	'md-sys-motion-easing-legacy-decelerate': 'cubic-bezier(0.0, 0, 0.2, 1)',
 	'md-sys-motion-easing-legacy-accelerate': 'cubic-bezier(0.4, 0, 1.0, 1)',
 
-	/* path */
+	/* motion-path */
 	'md-sys-motion-path': 'Linear',
+
+	/* state-opacity */
+	'md-sys-state-hover-state-layer-opacity': '0.08',
+	'md-sys-state-focus-state-layer-opacity': '0.12',
+	'md-sys-state-pressed-state-layer-opacity': '0.12',
+	'md-sys-state-dragged-state-layer-opacity': '0.16',
+
+	/* shape-rounded */
+	'md-sys-shape-corner-none': '0px',
+	'md-sys-shape-corner-extra-small': '4px',
+	'md-sys-shape-corner-extra-small-top': '4px 4px 0px 0px,',
+	'md-sys-shape-corner-small': '8px',
+	'md-sys-shape-corner-medium': '12px,',
+	'md-sys-shape-corner-large': '16px',
+	'md-sys-shape-corner-large-end': '0px 16px 16px 0px',
+	'md-sys-shape-corner-large-top': '16px 16px 0px 0px',
+	'md-sys-shape-corner-extra-large': '28px',
+	'md-sys-shape-corner-extra-large-top': '28px 28px 0px 0px',
+	'md-sys-shape-corner-full': '9999px',
 };
 
 export default token;
