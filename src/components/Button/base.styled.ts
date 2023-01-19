@@ -18,10 +18,10 @@ export const BaseStateLayer = styled.span<BaseStateProps>`
 `;
 
 type BaseLabelProps = {};
-export const BaseLabelLayer = styled.div<BaseLabelProps>`
+export const BaseLabelLayer = styled.span<BaseLabelProps>`
 	${withTypography('label-large')};
-	text-align: center;
 	display: inline-block;
+	text-align: center;
 	order: 2;
 	z-index: 2;
 `;
@@ -37,6 +37,7 @@ export const BaseContainer = styled.button<BaseContainerProps>`
 	outline: none;
 	stroke: none;
 	margin: 0;
+	text-decoration: none;
 	place-items: center;
 	place-content: center;
 	border-radius: 100px;
