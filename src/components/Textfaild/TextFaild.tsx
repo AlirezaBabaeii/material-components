@@ -1,3 +1,5 @@
+import { Icon } from '../Icon';
+import { IconSymbolType } from '../Icon/types';
 import { Input, Label, RightComponent } from './base.styled';
 import { TextFilledContainer, InerContainer } from './TextFilled.styled';
 import OutlindeTextFilled, { LabelOutlined } from './TextOutlined.styled';
@@ -14,7 +16,7 @@ enum Type {
 }
 
 function TextFaild(props: TextFaildType): JSX.Element {
-	const { variant, type, placeholder = ' ' } = props;
+	const { variant, type, placeholder = ' ', icon } = props;
 	switch (variant) {
 		case Variant.Outlined:
 			return (
@@ -25,7 +27,11 @@ function TextFaild(props: TextFaildType): JSX.Element {
 						type={type}
 					/>
 					<LabelOutlined>label</LabelOutlined>
-					<div className="right-icon">icon</div>
+					{icon && (
+						<div className="right-icon">
+							<Icon icon={icon} />
+						</div>
+					)}
 				</OutlindeTextFilled>
 			);
 
@@ -39,7 +45,11 @@ function TextFaild(props: TextFaildType): JSX.Element {
 						/>
 						<Label>label</Label>
 					</InerContainer>
-					<RightComponent>icon</RightComponent>
+					{icon && (
+						<RightComponent>
+							<Icon icon={icon} />
+						</RightComponent>
+					)}
 				</TextFilledContainer>
 			);
 	}
@@ -49,6 +59,7 @@ type TextFaildType = React.PropsWithChildren<{
 	variant: `${Variant}` | Variant;
 	type: `${Type}` | Type;
 	placeholder?: string;
+	icon?: IconSymbolType;
 }>;
 
 export default TextFaild;
