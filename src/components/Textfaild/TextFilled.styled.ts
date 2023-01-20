@@ -36,7 +36,8 @@ export const TextFilledContainer = styled.div`
 	& ${Input}:not(:placeholder-shown) + ${Label} {
 		transform: translateY(-50%);
 		top: 0%;
-		line-height: 16px;
+		font-size: 12px;
+		/* // TODO : using token font-size */
 		color: #343dff;
 	}
 `;
