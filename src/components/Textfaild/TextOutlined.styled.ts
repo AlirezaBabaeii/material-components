@@ -9,13 +9,14 @@ export const LabelOutlined = styled.div`
 	transition: top 300ms;
 	margin-inline-start: 12px;
 `;
-
-const OutlindeTextFilled = styled.div`
+type OutlindeTextFilledPropsType = { error: boolean };
+const OutlindeTextFilled = styled.div<OutlindeTextFilledPropsType>`
 	position: relative;
 	width: 300px;
 	height: 57px;
 	background-color: white;
 	border: 1px solid #777680;
+	/* // TODO : fixed chage color on change props value*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
