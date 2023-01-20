@@ -14,14 +14,14 @@ enum Type {
 }
 
 function TextFaild(props: TextFaildType): JSX.Element {
-	const { variant, type } = props;
+	const { variant, type, placeholder = ' ' } = props;
 	switch (variant) {
 		case Variant.Outlined:
 			return (
 				<OutlindeTextFilled>
 					{/* <div className="left-icon">icon</div> */}
 					<input
-						placeholder=" "
+						placeholder={placeholder}
 						type={type}
 					/>
 					<LabelOutlined>label</LabelOutlined>
@@ -35,7 +35,7 @@ function TextFaild(props: TextFaildType): JSX.Element {
 					<InerContainer>
 						<Input
 							type={type}
-							placeholder=" "
+							placeholder={placeholder}
 						/>
 						<Label>label</Label>
 					</InerContainer>
@@ -48,6 +48,7 @@ function TextFaild(props: TextFaildType): JSX.Element {
 type TextFaildType = React.PropsWithChildren<{
 	variant: `${Variant}` | Variant;
 	type: `${Type}` | Type;
+	placeholder?: string;
 }>;
 
 export default TextFaild;
