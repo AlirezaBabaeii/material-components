@@ -6,15 +6,24 @@ enum Variant {
 	Filled = 'filled',
 	Outlined = 'outlined',
 }
+enum Type {
+	Text = 'text',
+	password = 'password',
+	number = 'number',
+	email = 'email',
+}
 
 function TextFaild(props: TextFaildType): JSX.Element {
-	const { variant } = props;
+	const { variant, type } = props;
 	switch (variant) {
 		case Variant.Outlined:
 			return (
 				<OutlindeTextFilled>
 					{/* <div className="left-icon">icon</div> */}
-					<input placeholder=" " />
+					<input
+						placeholder=" "
+						type={type}
+					/>
 					<LabelOutlined>label</LabelOutlined>
 					<div className="right-icon">icon</div>
 				</OutlindeTextFilled>
@@ -25,7 +34,7 @@ function TextFaild(props: TextFaildType): JSX.Element {
 				<TextFilledContainer>
 					<InerContainer>
 						<Input
-							type="text"
+							type={type}
 							placeholder=" "
 						/>
 						<Label>label</Label>
@@ -38,6 +47,7 @@ function TextFaild(props: TextFaildType): JSX.Element {
 
 type TextFaildType = React.PropsWithChildren<{
 	variant: `${Variant}` | Variant;
+	type: `${Type}` | Type;
 }>;
 
 export default TextFaild;
