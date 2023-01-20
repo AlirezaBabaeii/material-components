@@ -16,11 +16,11 @@ enum Type {
 }
 
 function TextFaild(props: TextFaildType): JSX.Element {
-	const { variant, type, placeholder = ' ', icon } = props;
+	const { variant, type, placeholder = ' ', icon, error = false } = props;
 	switch (variant) {
 		case Variant.Outlined:
 			return (
-				<OutlindeTextFilled>
+				<OutlindeTextFilled error={error}>
 					{/* <div className="left-icon">icon</div> */}
 					<input
 						placeholder={placeholder}
@@ -60,6 +60,7 @@ type TextFaildType = React.PropsWithChildren<{
 	type: `${Type}` | Type;
 	placeholder?: string;
 	icon?: IconSymbolType;
+	error?: boolean;
 }>;
 
 export default TextFaild;
