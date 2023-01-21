@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Input, Label } from './base.styled';
 
-export const InerContainer = styled.div`
+export const InnerContainer = styled.div`
 	height: 100%;
 	position: relative;
 	margin-inline-start: 16px;
