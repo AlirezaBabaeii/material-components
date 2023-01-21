@@ -19,7 +19,6 @@ export const TextFilledContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	padding-block: 8px;
-	padding-inline: 4px;
 	gap: 4px;
 	border: none;
 	border-radius: 4px 4px 0px 0px;
