@@ -28,9 +28,9 @@ function TextFields(props: TextFieldsType): JSX.Element {
 					/>
 					<LabelOutlined>label</LabelOutlined>
 					{icon && (
-						<div className="right-icon">
+						<RightComponent>
 							<Icon icon={icon} />
-						</div>
+						</RightComponent>
 					)}
 				</OutlinedTextFilled>
 			);

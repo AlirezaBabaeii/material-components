@@ -8,7 +8,7 @@ export const LabelOutlined = styled.div`
 	top: 50%;
 	background: white;
 	transition: top 300ms;
-	margin-inline-start: 12px;
+	margin-inline-start: 16px;
 `;
 type OutlinedTextFilledPropsType = { error: boolean };
 const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
@@ -23,7 +23,6 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	justify-content: space-between;
 	align-items: center;
 	padding-block: 8px;
-	padding-inline: 4px;
 	gap: 4px;
 	border-style: solid;
 	border-width: ${(props) => (props.error ? '2px' : '1px')};
@@ -47,7 +46,7 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 		height: 100%;
 		border: none;
 		outline: none;
-		margin-inline-start: 12px;
+		margin-inline-start: 16px;
 	}
 	& input:focus + ${LabelOutlined} {
 		transform: translateY(-50%) scale(0.9);
