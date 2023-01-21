@@ -18,7 +18,6 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	background-color: white;
 	color: ${(props) =>
 		props.error ? withToken('error') : withToken('on-surface-variant')};
-	/* // TODO : fixed change color on change props value*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
