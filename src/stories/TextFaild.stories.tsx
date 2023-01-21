@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import TextFields from '../components/Textfaild/TextFaild';
+import TextFields from '../components/TextField/TextFaild';
 
 export default {
 	title: 'Example/TextFaild',
