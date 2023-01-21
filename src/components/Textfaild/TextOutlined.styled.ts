@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { withRounded, withToken } from '../../theme';
 
 export const LabelOutlined = styled.div`
 	position: absolute;
@@ -15,7 +16,8 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	width: 300px;
 	height: 57px;
 	background-color: white;
-	border: 1px solid #777680;
+	color: ${(props) =>
+		props.error ? withToken('error') : withToken('on-surface-variant')};
 	/* // TODO : fixed change color on change props value*/
 	display: flex;
 	flex-direction: row;
@@ -24,11 +26,14 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	padding-block: 8px;
 	padding-inline: 4px;
 	gap: 4px;
-	border: 1px solid #777680;
-	border-radius: 4px;
+	border: ${(props) => (props.error ? '2px' : '1px')} solid
+		${(props) => (props.error ? withToken('error') : withToken('outline'))};
+	${withRounded('extra-small')}
+
 	&:focus-within {
-		border: 2px solid #343dff;
-		border-radius: 4px;
+		border: 2px solid
+			${(props) =>
+				props.error ? withToken('error') : withToken('primary')};
 	}
 	& .left-icon {
 		width: max-content;
@@ -47,7 +52,8 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	& input:focus + ${LabelOutlined} {
 		transform: translateY(-50%) scale(0.9);
 		top: 0%;
-		color: #343dff;
+		color: ${(props) =>
+			props.error ? withToken('error') : withToken('primary')};
 	}
 	& input:not(:placeholder-shown) + ${LabelOutlined} {
 		transform: translateY(-50%) scale(0.9);
