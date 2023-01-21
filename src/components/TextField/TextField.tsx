@@ -17,16 +17,23 @@ enum Type {
 
 function TextFields(props: TextFieldsType): JSX.Element {
 	const { variant, type, placeholder = ' ', icon, error = false } = props;
+	const a = true;
 	switch (variant) {
 		case Variant.Outlined:
 			return (
 				<OutlinedTextFilled error={error}>
-					{/* <div className="left-icon">icon</div> */}
-					<input
-						placeholder={placeholder}
-						type={type}
-					/>
-					<LabelOutlined>label</LabelOutlined>
+					{icon && (
+						<RightComponent>
+							<Icon icon={icon} />
+						</RightComponent>
+					)}
+					<InnerContainer twosIcon={a}>
+						<input
+							placeholder={placeholder}
+							type={type}
+						/>
+						<LabelOutlined>label</LabelOutlined>
+					</InnerContainer>
 					{icon && (
 						<RightComponent>
 							<Icon icon={icon} />
@@ -38,7 +45,12 @@ function TextFields(props: TextFieldsType): JSX.Element {
 		default:
 			return (
 				<TextFilledContainer>
-					<InnerContainer>
+					{icon && (
+						<RightComponent>
+							<Icon icon={icon} />
+						</RightComponent>
+					)}
+					<InnerContainer twosIcon={a}>
 						<Input
 							type={type}
 							placeholder={placeholder}

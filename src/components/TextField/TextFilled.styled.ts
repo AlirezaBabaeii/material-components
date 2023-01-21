@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { Input, Label } from './base.styled';
 
-export const InnerContainer = styled.div`
+type InnerContainerPropsType = { twosIcon: boolean };
+export const InnerContainer = styled.div<InnerContainerPropsType>`
 	height: 100%;
 	position: relative;
-	margin-inline-start: 16px;
+	margin-inline-start: ${(props) => (props.twosIcon ? '0px' : '16px')};
 	flex-shrink: 1;
 	flex-grow: 1;
 `;
