@@ -1,23 +1,23 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import TextFaild from '../components/Textfaild/TextFaild';
+import TextFields from '../components/Textfaild/TextFaild';
 
 export default {
 	title: 'Example/TextFaild',
-	component: TextFaild,
+	component: TextFields,
 	argTypes: { variant: String },
-} as ComponentMeta<typeof TextFaild>;
+} as ComponentMeta<typeof TextFields>;
 
-const Template: ComponentStory<typeof TextFaild> = function Template(
+const Template: ComponentStory<typeof TextFields> = function Template(
 	args: any,
 ) {
 	return (
-		<TextFaild
+		<TextFields
 			label="dshd"
 			{...args}>
 			Hello World
-		</TextFaild>
+		</TextFields>
 	);
 };
 
