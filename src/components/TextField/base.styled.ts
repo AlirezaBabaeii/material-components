@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 export const RightComponent = styled.div`
-	width: max-content;
+	width: 48px;
+	height: 48px;
 	flex-shrink: 1;
 	flex-grow: 0;
-	align-items: center;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const Label = styled.div`
@@ -21,4 +24,6 @@ export const Input = styled.input`
 	outline: none;
 	background: transparent;
 	width: 100%;
+	padding: 0;
+	margin: 0;
 `;
