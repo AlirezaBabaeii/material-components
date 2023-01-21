@@ -17,7 +17,7 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	height: 57px;
 	background-color: white;
 	color: ${(props) =>
-		props.error ? withToken('error') : withToken('on-surface-variant')};
+		withToken(props.error ? 'error' : 'on-surface-variant')};
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -25,14 +25,15 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	padding-block: 8px;
 	padding-inline: 4px;
 	gap: 4px;
-	border: ${(props) => (props.error ? '2px' : '1px')} solid
-		${(props) => (props.error ? withToken('error') : withToken('outline'))};
+	border-style: solid;
+	border-width: ${(props) => (props.error ? '2px' : '1px')};
+	border-color: ${(props) => withToken(props.error ? 'error' : 'outline')};
 	${withRounded('extra-small')}
 
 	&:focus-within {
-		border: 2px solid
-			${(props) =>
-				props.error ? withToken('error') : withToken('primary')};
+		border-width: 2px;
+		border-color: ${(props) =>
+			withToken(props.error ? 'error' : 'primary')};
 	}
 	& .left-icon {
 		width: max-content;
@@ -51,8 +52,7 @@ const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	& input:focus + ${LabelOutlined} {
 		transform: translateY(-50%) scale(0.9);
 		top: 0%;
-		color: ${(props) =>
-			props.error ? withToken('error') : withToken('primary')};
+		color: ${(props) => withToken(props.error ? 'error' : 'primary')};
 	}
 	& input:not(:placeholder-shown) + ${LabelOutlined} {
 		transform: translateY(-50%) scale(0.9);
