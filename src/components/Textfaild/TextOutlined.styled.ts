@@ -9,14 +9,14 @@ export const LabelOutlined = styled.div`
 	transition: top 300ms;
 	margin-inline-start: 12px;
 `;
-type OutlindeTextFilledPropsType = { error: boolean };
-const OutlindeTextFilled = styled.div<OutlindeTextFilledPropsType>`
+type OutlinedTextFilledPropsType = { error: boolean };
+const OutlinedTextFilled = styled.div<OutlinedTextFilledPropsType>`
 	position: relative;
 	width: 300px;
 	height: 57px;
 	background-color: white;
 	border: 1px solid #777680;
-	/* // TODO : fixed chage color on change props value*/
+	/* // TODO : fixed change color on change props value*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -55,4 +55,4 @@ const OutlindeTextFilled = styled.div<OutlindeTextFilledPropsType>`
 	}
 `;
 
-export default OutlindeTextFilled;
+export default OutlinedTextFilled;
